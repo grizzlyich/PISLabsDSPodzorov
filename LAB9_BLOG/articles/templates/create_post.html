@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Новая запись</title>
+    <link rel="stylesheet" href="{% static 'css/create_post.css' %}">
+</head>
+<body>
+<div class="header">
+    <a href="{% url 'archive' %}">
+        <img src="{% static 'img/dpb-logo.png' %}" alt="logo">
+    </a>
+    <a class="all-posts-link" href="{% url 'archive' %}">Все записи</a>
+</div>
+<div class="form-wrap">
+    <h1>Создание новой записи</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label>Название</label>
+        <input type="text" name="title" value="{{ form.title.value|default_if_none:'' }}">
+        <label>Текст</label>
+        <textarea name="text" rows="10">{{ form.text.value|default_if_none:'' }}</textarea>
+        <button type="submit">Сохранить</button>
+        {% if form.errors %}
+        <div class="errors">
+            {% for field in form %}
+                {% for error in field.errors %}<p>{{ error }}</p>{% endfor %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </form>
+</div>
+</body>
+</html>

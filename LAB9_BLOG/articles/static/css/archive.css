@@ -1,0 +1,195 @@
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #ececec;
+    margin: 0;
+    color: #003f35;
+}
+
+.header {
+    background: #004d37;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+.header-inner {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    min-height: 250px;
+}
+
+.logo-link {
+    display: inline-block;
+    margin-top: 18px;
+}
+
+.logo {
+    display: block;
+    width: 220px;
+    height: auto;
+    position: relative;
+    z-index: 5;
+    will-change: transform;
+}
+
+.header-text-area {
+    position: relative;
+    z-index: 5;
+    margin-top: 8px;
+}
+
+.service-title {
+    color: #000;
+    font-size: 18px;
+    margin: 8px 0 6px;
+}
+
+.hello,
+.register-link {
+    color: blue;
+    text-decoration: underline;
+    margin: 0 4px;
+}
+
+.icons-for-parallax {
+    position: relative;
+    width: 520px;
+    height: 110px;
+    margin: 18px auto 0;
+}
+
+.icons-for-parallax img {
+    position: absolute;
+    height: auto;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.icon-for-parallax-first {
+    width: 110px;
+    left: 70px;
+    top: 0;
+    z-index: 3;
+}
+
+.icon-for-parallax-second {
+    width: 88px;
+    left: 215px;
+    top: 6px;
+    z-index: 2;
+}
+
+.icon-for-parallax-third {
+    width: 96px;
+    left: 345px;
+    top: 2px;
+    z-index: 1;
+}
+
+.page-content {
+    padding-top: 30px;
+}
+
+.archive {
+    width: 800px;
+    margin: 0 auto 40px;
+}
+
+.one-post {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.one-post > * {
+    position: relative;
+    z-index: 1;
+}
+
+.shadow {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    right: -8px;
+    bottom: -8px;
+    background: rgba(0,0,0,0.06);
+    border-radius: 8px;
+    z-index: 0;
+}
+
+.post-managment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.post-title { margin: 0 0 10px 0; }
+.post-title a {
+    text-decoration: none;
+    color: #0c3c2c;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.fold-button {
+    cursor: pointer;
+    user-select: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #0c3c2c;
+    background: #fff;
+    color: #0c3c2c;
+    font-weight: bold;
+}
+
+.article-info {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.article-author {
+    width: 50%;
+    float: left;
+}
+.article-created-date {
+    text-align: right;
+}
+.article-text {
+    font-size: 16px;
+    clear: both;
+    line-height: 1.45;
+}
+
+.one-post.folded .article-info,
+.one-post.folded .article-text,
+.one-post.folded .post-actions {
+    display: none;
+}
+
+.post-actions { margin-top: 15px; }
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #0c3c2c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+.btn.danger { background: #b00020; }
+
+.all-posts-link {
+    color: #0c3c2c;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.empty { color: #444; }
