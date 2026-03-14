@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Редактирование: {{ post.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+<body>
+
+<div class="header">
+    <a href="{% url 'archive' %}">
+        <img src="{% static 'img/dpb-logo.png' %}" alt="logo">
+    </a>
+    <a class="all-posts-link" href="{% url 'get_article' article_id=post.id %}">Назад к статье</a>
+</div>
+
+<div class="content">
+    <h1 class="title">Редактирование</h1>
+
+    <form method="post" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn" type="submit">Сохранить</button>
+        <a class="btn light" href="{% url 'get_article' article_id=post.id %}">Отмена</a>
+    </form>
+</div>
+
+</body>
+</html>

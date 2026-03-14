@@ -1,0 +1,38 @@
+body { font-family: Tahoma, Arial, sans-serif; background: #f4f4f4; margin: 0; }
+
+.header { background: #0c3c2c; padding: 20px; text-align: center; }
+.header img { height: 60px; vertical-align: middle; }
+.all-posts-link { color: #fff; margin-left: 20px; text-decoration: none; }
+
+.content {
+    width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.title { margin-top: 0; }
+
+.info { font-size: 14px; color: #777; margin-bottom: 15px; display:flex; justify-content: space-between; }
+.text { font-size: 16px; line-height: 1.5; }
+
+.post-actions { margin: 15px 0 20px 0; }
+.inline-form { display: inline; }
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #0c3c2c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn.danger { background: #b00020; }
+.btn.light { background: #666; }

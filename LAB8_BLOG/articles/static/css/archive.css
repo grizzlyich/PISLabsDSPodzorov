@@ -1,0 +1,100 @@
+body { font-family: Tahoma, Arial, sans-serif; background: #f4f4f4; margin: 0; }
+
+.header { background: #0c3c2c; padding: 20px; text-align: center; }
+.header img { height: 80px; vertical-align: middle; }
+
+.auth-links { margin-top: 10px; }
+.auth-links a, .auth-links .hello { color: #fff; margin: 0 8px; text-decoration: none; }
+
+.archive { width: 800px; margin: 40px auto; }
+
+.one-post {
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.post-managment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-title { margin: 0 0 10px 0; }
+.post-title a { text-decoration: none; color: #0c3c2c; }
+
+.fold-button {
+    cursor: pointer;
+    user-select: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #0c3c2c;
+    background: #fff;
+    color: #0c3c2c;
+    font-weight: bold;
+}
+
+.article-info { font-size: 14px; color: #777; margin-bottom: 10px; }
+.article-author { width: 50%; float: left; }
+.article-created-date { text-align: right; }
+.article-text { font-size: 16px; clear: both; }
+
+.post-actions { margin-top: 15px; }
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #0c3c2c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+.btn.danger { background: #b00020; }
+
+/* Сворачивание */
+.one-post.folded .article-info,
+.one-post.folded .article-text,
+.one-post.folded .post-actions {
+    display: none;
+}
+
+.all-posts-link {
+    color: #0c3c2c;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+.shadow{
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    right: -8px;
+    bottom: -8px;
+    background: rgba(0,0,0,0.06);
+    border-radius: 8px;
+    z-index: -1;
+}
+
+/* ЛР8: тень для карточки поста */
+.one-post{
+    position: relative;
+}
+.one-post > *{
+    position: relative;
+    z-index: 1;
+}
+.shadow{
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    right: -8px;
+    bottom: -8px;
+    background: rgba(0,0,0,0.06);
+    border-radius: 8px;
+    z-index: 0;
+}

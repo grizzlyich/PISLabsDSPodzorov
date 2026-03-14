@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+<body>
+<div class="header">
+    <a href="{% url 'archive' %}">
+        <img src="{% static 'img/dpb-logo.png' %}" alt="logo">
+    </a>
+    <a class="all-posts-link" href="{% url 'archive' %}">Все записи</a>
+</div>
+
+<div class="content">
+    <h1 class="title">{{ post.title }}</h1>
+
+    <div class="info">
+        <div class="author">{{ post.author.username }}</div>
+        <div class="date">{{ post.created_date }}</div>
+    </div>
+
+    {% if request.user.is_authenticated and request.user == post.author %}
+    <div class="post-actions">
+        <a class="btn" href="{% url 'edit_post' article_id=post.id %}">✏ Редактировать</a>
+        <a class="btn danger" href="{% url 'delete_post' article_id=post.id %}">🗑 Удалить</a>
+    </div>
+    {% endif %}
+
+    <div class="text">{{ post.text|linebreaks }}</div>
+</div>
+
+</body>
+</html>
