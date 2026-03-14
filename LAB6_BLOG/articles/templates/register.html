@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+</head>
+<body>
+<div class="auth-wrap">
+    <h1>Регистрация</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label>Логин</label>
+        <input type="text" name="username" value="{{ username|default_if_none:'' }}">
+        <label>Email</label>
+        <input type="email" name="email" value="{{ email|default_if_none:'' }}">
+        <label>Пароль</label>
+        <input type="password" name="password">
+        <button type="submit">Создать аккаунт</button>
+    </form>
+    {% if errors %}
+        {% for e in errors %}<p class="error">{{ e }}</p>{% endfor %}
+    {% endif %}
+    <p><a href="{% url 'login' %}">Вход</a></p>
+    <p><a href="{% url 'archive' %}">На главную</a></p>
+</div>
+</body>
+</html>
